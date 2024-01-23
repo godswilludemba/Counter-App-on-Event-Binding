@@ -14,6 +14,10 @@ const app = Vue.createApp({
       // e.preventDefault(); this can be achieved using modifiers
       alert("submitted successfully!");
     },
+    resetInput() {
+      this.confirmName = "";
+      this.Name = "";
+    },
     setName(e) {
       this.Name = e.target.value;
     },

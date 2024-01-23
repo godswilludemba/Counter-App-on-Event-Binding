@@ -27,8 +27,15 @@
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
 
-      <input type="text" v-on:input="setName" v-on:keyup.enter="confirmInput" />
+      <button v-on:click="resetInput">Reset Input</button>
+      <input
+        type="text"
+        v-on:input="setName"
+        v-on:keyup.enter="confirmInput"
+        v-bind:value="Name"
+      />
       <p>Your Name is: {{ confirmName }}</p>
+
       <form action="" v-on:submit.prevent="submitForm">
         <input type="text" /> <button>Sign Up</button>
       </form>
